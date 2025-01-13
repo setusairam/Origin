@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #0A21C0;
+}
+
+/* Education Section */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.education-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.college-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.college-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.college-details h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #0A21C0;
+    margin-bottom: 5px; /* Adjust space between title and other details */
+}
+
+.college-details p {
+    margin: 2px 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.college-achievements {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #333;
+    text-align: left; /* Ensures the list items align to the left */
+    width: 100%; /* Ensures the list takes full width of the parent container */
+}
+
+.college-achievements li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Certificate Grid */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.certificate-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-image {
+    background: #f4f4f9;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-image img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.certificate-title {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background: #e8f1fc;
+}
+
+/* Footer */
+footer {
+    background: #2C2E3A;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

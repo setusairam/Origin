@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: whitesmoke; /* Smooth transition for theme changes */
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Paper Publications Section */
+#publications {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+}
+
+#publications h2 {
+    font-size: 2rem;
+    color: #0A21C0; /* Vibrant blue for section heading */
+    margin-bottom: 30px;
+}
+
+/* Publication List Container */
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between publications */
+    align-items: center; /* Center publications */
+}
+
+/* Individual Publication Card */
+.publication-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    text-align: left; /* Align text to the left for better readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Publication Title */
+.publication-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0A21C0; /* Vibrant blue for titles */
+    margin-bottom: 10px;
+}
+
+/* Publication Metadata */
+.publication-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Abstract and Description */
+.publication-abstract {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Publication Links */
+.publication-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.publication-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: #0A21C0; /* Blue button background */
+    color: white; /* White text */
+    transition: background 0.3s ease;
+}
+
+.publication-links a:hover {
+    background: #0647B3; /* Darker blue on hover */
+}
+
+/* Media Responsiveness */
+@media (max-width: 768px) {
+    .publication-card {
+        padding: 15px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #2C2E3A;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

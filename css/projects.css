@@ -1,0 +1,196 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: block; /* Use block layout for natural flow */
+    min-height: 100vh; /* Ensure the page height covers the viewport */
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0A21C0;
+}
+
+/* Individual Project */
+.project {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+    flex-direction: row;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+.project-image {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+.project-details {
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-details h2 {
+    font-size: 2rem;
+    color: #0A21C0;
+    margin-bottom: 20px;
+}
+
+.project-details p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tech-icon i {
+    font-size: 1.8rem;
+    color: #0A21C0;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.redirect-btn {
+    background: #0A21C0;
+}
+
+.redirect-btn:hover {
+    background: #083799;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-details {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .project-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-details p {
+        font-size: 0.95rem;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .project-image img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-details p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background: #2C2E3A;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Add more padding for spacing */
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 100%; /* Ensure footer spans the full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    margin-top: 20px; /* Add space between projects and footer */
+}
