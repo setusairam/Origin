@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: whitesmoke; /* Smooth transition for theme changes */
+    background-color: whitesmoke;
 }
 
 .container {
@@ -17,58 +17,24 @@ body {
     max-width: 1200px;
 }
 
-/* Center the button container */
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Adjust spacing as needed */
-}
-
-/* Style for the button */
-.redirect-btn {
-    background-color: #0A21C0; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.redirect-btn:hover {
-    background-color: #0941a1; /* Darker blue on hover */
-}
-
 /* Section Styling */
 .section {
     padding: 50px 0;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Raleway', sans-serif;
-}
-
-h2 {
-    font-size: 2rem;
+    color: #0A21C0;
     text-align: center;
     margin-bottom: 20px;
-    color: #0A21C0; /* Vibrant blue for headings */
-}
-
-/* Experience Section Styling */
-.experience-section {
-    width: 90%;
-    margin: 50px auto;
-    max-width: 800px;
 }
 
 h1 {
     font-size: 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #0A21C0;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 /* Timeline Styling */
@@ -77,14 +43,21 @@ h1 {
     padding: 0 20px;
 }
 
-.timeline-item {
-    display: flex;
-    margin-bottom: 40px;
-    position: relative;
+.timeline-item:hover {
+    transform: translateY(-5px);
 }
 
-.timeline-item:last-child {
-    margin-bottom: 0;
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 20px;
+    background-color: transparent;
+    border: 1px transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-dot {
@@ -93,27 +66,23 @@ h1 {
     background-color: #0A21C0;
     border-radius: 50%;
     position: absolute;
-    left: -10px; /* Adjust alignment */
-    top: 10px;
+    left: -10px;
+    top: 20px;
 }
 
 .timeline-content {
-    margin-left: 40px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* Flexbox layout for the timeline row */
 .timeline-row {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between the logo and text */
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-/* Style for the company logo */
 .company-logo {
     flex-shrink: 0;
     width: 80px;
@@ -121,64 +90,18 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
 }
 
 .company-logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px; /* Optional: Rounded corners */
-    border: 2px solid #ccc; /* Optional: Border around the logo */
+    border-radius: 5px;
 }
 
-/* Timeline text styling */
 .timeline-text {
-    flex-grow: 1;
-    color: #333;
-}
-
-.timeline-text h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #0A21C0;
-}
-
-.timeline-text .timeline-date {
-    font-size: 0.9rem;
-    color: gray;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.timeline-content p {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #555;
-}
-
-.timeline-content ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.timeline-content ul li {
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.timeline-content ul li::before {
-    content: "•";
-    position: absolute;
-    left: -20px;
-    color: #0A21C0;
-}
-
-/* General Timeline Styles */
-.timeline-item {
-    margin-bottom: 40px;
-    position: relative;
-    padding: 20px;
-    border-radius: 10px;
+    flex: 1;
 }
 
 .timeline-text h2 {
@@ -187,16 +110,16 @@ h1 {
     margin-bottom: 5px;
 }
 
-.timeline-text p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.timeline-date {
+.timeline-text .timeline-date {
     font-size: 0.9rem;
     color: gray;
     margin-bottom: 10px;
-    display: block;
+}
+
+.timeline-text p {
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
 }
 
 ul {
@@ -205,141 +128,75 @@ ul {
     color: #333;
 }
 
-ul.promotion-list {
-    list-style: square; /* Distinguish promotion list */
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-ul.promotion-details {
-    list-style: circle; /* Distinguish inner details */
-    margin-left: 20px;
-}
-
-/* Styling for Promotions Section */
-.promotions h3 {
-    font-size: 1.2rem;
-    color: #0A21C0;
-    margin-top: 15px;
+ul li {
     margin-bottom: 10px;
 }
 
-/* Transition for Expandable Promotions (Optional) */
-.promotion-list li {
-    transition: all 0.3s ease;
-}
-
-.promotion-list li:hover {
-    transform: translateX(5px); /* Slight shift on hover */
-}
-
-
-/* Add a thin dotted line between the timeline items */
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 19px; /* Align with the center of the dots */
-    width: 2px;
-    height: 100%;
-    background: repeating-linear-gradient(
-        180deg,
-        #0A21C0,
-        #0A21C0 2px,
-        transparent 2px,
-        transparent 4px
-    );
-    z-index: -1;
-}
-
-/* AOS Animations Enhancements */
-[data-aos="fade-down"] {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-[data-aos="fade-down"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Hover Effects for Timeline Items */
-.timeline-item:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Custom Keyframes as Fallback */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* Responsive Styling for Mobile */
+@media screen and (max-width: 600px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .timeline-row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .company-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .timeline-text {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .timeline-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-text .timeline-date {
+        font-size: 0.85rem;
+    }
+
+    .timeline-text p, ul li {
+        font-size: 0.9rem;
     }
 }
 
-/* Fallback Animations (Without AOS) */
-.timeline-item {
-    animation: fadeUp 1s ease-out forwards;
-    opacity: 0;
-}
+/* Additional Tweaks for Ultra-Small Screens */
+@media screen and (max-width: 400px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
 
-.timeline-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
+    .timeline-item {
+        padding: 10px;
+    }
 
-.timeline-item:nth-child(2) {
-    animation-delay: 0.4s;
-}
+    .company-logo {
+        width: 50px;
+        height: 50px;
+    }
 
-.timeline-item:nth-child(3) {
-    animation-delay: 0.6s;
-}
+    .timeline-text h2 {
+        font-size: 1rem;
+    }
 
-/* Pop-Up Animation for Timeline Items */
-.timeline-item {
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for pop-up effect */
-}
+    .timeline-text .timeline-date {
+        font-size: 0.8rem;
+    }
 
-.timeline-item:hover {
-    transform: scale(1.05); /* Slightly enlarges the item on hover */
-}
-
-/* Optional: Add Glow Effect to the Dot */
-.timeline-dot {
-    transition: box-shadow 0.3s ease;
-}
-
-.timeline-item:hover .timeline-dot {
-    box-shadow: 0 0 10px 5px #0A21C0; /* Blue glow effect */
-}
-
-/* Optional: Pop-Up for the Timeline Text */
-.timeline-text {
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth pop-up */
-    opacity: 0.9; /* Slight transparency to the text */
-}
-
-.timeline-item:hover .timeline-text {
-    transform: translateY(-5px); /* Moves the text slightly up */
-    opacity: 1; /* Fully visible */
+    .timeline-text p, ul li {
+        font-size: 0.8rem;
+    }
 }
 
 /* Footer */
