@@ -65,26 +65,56 @@ header {
     text-align: center;
 }
 
-/* Default styles for larger screens (laptops, desktops) */
+
+/* Updated Navbar for PC (Logo on the left, items on the right) */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Separate logo and nav items */
     align-items: center;
-    padding: 0 20px; /* Adds some space on the sides */
+    padding: 0 20px;
 }
 
-/* Styles for smaller screens (mobiles) */
+.navbar-logo {
+    flex-shrink: 0; /* Ensure the logo maintains its size */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Spacing between navigation items */
+}
+
+/* Responsive Navbar for Mobile (Two rows of nav items) */
+/* Responsive Navbar for Mobile (Single row of nav items) */
 @media (max-width: 768px) {
     .navbar {
-        display: inline-block; /* Stacks items vertically */
-        width: 100%; /* Uses the full width of the screen */
-        text-align: center; /* Centers the items */
+        display: flex;
+        flex-direction: column; /* Stack logo and nav items vertically */
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        gap: 10px; /* Add space between logo and nav items */
     }
 
-    .navbar a { /* Adjust for nav links if using <a> tags */
+    .nav-links {
+        display: flex; /* Use flexbox for a single row */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center items */
+        gap: 10px; /* Add spacing between items */
+        width: 100%; /* Occupy the full screen width */
+        text-align: center;
+    }
+
+    .nav-links li {
+        list-style: none; /* Remove default list styling */
+        flex: 1 1 auto; /* Allow items to grow and shrink */
+        min-width: 100px; /* Set a minimum width for each item */
+    }
+
+    .nav-links a {
         display: block;
-        margin: 10px 0; /* Adds spacing between items */
-        text-decoration: none; /* Removes underline for links */
+        padding: 10px 0; /* Add padding for touch targets */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        text-align: center;
     }
 }
 
@@ -486,6 +516,38 @@ header {
     line-height: 1.5;
 }
 
+/* Responsive Styling for Mobile Screens */
+@media screen and (max-width: 600px) {
+    .education-container {
+        gap: 20px; /* Reduce the gap between items */
+    }
+
+    .education-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center content */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .college-logo img {
+        width: 80px; /* Adjust logo size */
+        height: 80px;
+        margin-bottom: 10px; /* Add space below logo */
+    }
+
+    .college-details h2 {
+        font-size: 1rem; /* Reduce title size */
+    }
+
+    .college-details p,
+    .college-achievements li {
+        font-size: 0.85rem; /* Reduce text size */
+    }
+
+    .college-achievements {
+        padding-left: 15px; /* Adjust padding for better fit */
+    }
+}
+
 /* Experience Section Styling */
 .experience-section {
     width: 90%;
@@ -619,6 +681,81 @@ h1 {
         transparent 4px
     );
     z-index: -1;
+}
+
+/* Responsive Styling for Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%; /* Increased width for mobiles from the default */
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .timeline-row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .company-logo {
+        margin: 0 auto; /* Centers the logo */
+        margin-bottom: 15px; /* Adds some spacing below the logo */
+        width: 80px; /* Increased size */
+        height: 80px; /* Increased size */
+    }
+
+    .timeline-text {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .timeline-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-text .timeline-date {
+        font-size: 0.85rem;
+    }
+
+    .timeline-text p, ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional Tweaks for Ultra-Small Screens */
+@media screen and (max-width: 400px) {
+    .container {
+        width: 95%; /* Increased width for mobiles from the default */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-item {
+        padding: 10px;
+    }
+
+    .company-logo {
+        width: 70px; /* Adjusted size for ultra-small screens */
+        height: 70px; /* Adjusted size for ultra-small screens */
+    }
+
+    .timeline-text h2 {
+        font-size: 1rem;
+    }
+
+    .timeline-text .timeline-date {
+        font-size: 0.8rem;
+    }
+
+    .timeline-text p, ul li {
+        font-size: 0.8rem;
+    }
 }
 
 /* Contact Section */
